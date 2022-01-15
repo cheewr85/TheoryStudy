@@ -198,8 +198,6 @@
 
 - 시스템 설정에서 애플리케이션 관리자를 이용해서도 앱을 종료시킬 수 있음
 
-
-
 ## 임시 UI 상태 저장 및 복원
 
 - 화면이 회전되거나 멀티 윈도우 모드로 진입 시 onDestroy() 메소드가 호출되어 모든 UI 상태를 제거함
@@ -230,7 +228,7 @@
 
 - Bundle Instance는 메인 스레드에서 직렬화되어야 하고 시스템  프로세스 메모리를 사용해서 소량의 데이터에만 적합
 
-```onSaveInstanceState sample code
+```onSaveInstanceState
 override fun onSaveInstanceState(outState: Bundle?) {
     // 현재 UI 데이터를 저장
     outState?.run {
@@ -302,13 +300,12 @@ companion object {
   - 인텐트를 통해서 가벼운 데이터 전송
     
     ```
-    
     // 동반 데이터 없이 단순히 새로운 액티비티로 이동
     
     val intent = Intent(this, SignInActivity::class.java)
     startActivity(intent)
-    
-    
+    ```
+
     ------------------------------------------------------------------
     // putExtra 메서드로 인텐트에 담을 데이터 할당
     
@@ -317,43 +314,43 @@ companion object {
     }
     startActivity(intent)
     ```
-  
-  ### startActivityForResult()
-  
-  - 액티비티가 종료될 경우 결과를 반환받음
-    ex. 연락처 목록 액티비티에서 선택된 사람의 데이터를 반환
-  
-  - requestCode를 통해 식별된 활동을 onActivityResult(requestCode : Int, resultCode : Int, intent: Intent) 메서드로 결과 반환
-  
-  - 시작된 하위 액티비티가 Intent 객체로 결과를 반환하면 onActivityResult()가 수신
+
+### startActivityForResult()
+
+- 액티비티가 종료될 경우 결과를 반환받음
+  ex. 연락처 목록 액티비티에서 선택된 사람의 데이터를 반환
+
+- requestCode를 통해 식별된 활동을 onActivityResult(requestCode : Int, resultCode : Int, intent: Intent) 메서드로 결과 반환
+
+- 시작된 하위 액티비티가 Intent 객체로 결과를 반환하면 onActivityResult()가 수신
   
   ```startActivityForResult
   class MyActivity : Activity() {
-      // ...
+    // ...
   
-      override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
-          if (keyCode == KeyEvent.KEYCODE_DPAD_CENTER) {
-              // 아이템의 가운데를 누르면 해당 값을 변수에 할당
-              startActivityForResult(
-                      Intent(Intent.ACTION_PICK,Uri.parse("content://contacts")),
-                      PICK_CONTACT_REQUEST)
-              return true
-          }
-          return false
-      }
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        if (keyCode == KeyEvent.KEYCODE_DPAD_CENTER) {
+            // 아이템의 가운데를 누르면 해당 값을 변수에 할당
+            startActivityForResult(
+                    Intent(Intent.ACTION_PICK,Uri.parse("content://contacts")),
+                    PICK_CONTACT_REQUEST)
+            return true
+        }
+        return false
+    }
   
-      override fun onActivityResult(requestCode: Int, resultCode: Int, intent: Intent?) {
-          when (requestCode) {
-              PICK_CONTACT_REQUEST ->
-                  if (resultCode == RESULT_OK) {
-                      startActivity(Intent(Intent.ACTION_VIEW, intent?.data))
-                  }
-          }
-      }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, intent: Intent?) {
+        when (requestCode) {
+            PICK_CONTACT_REQUEST ->
+                if (resultCode == RESULT_OK) {
+                    startActivity(Intent(Intent.ACTION_VIEW, intent?.data))
+                }
+        }
+    }
   
-      companion object {
-          internal val PICK_CONTACT_REQUEST = 0  // requestCode
-      }
+    companion object {
+        internal val PICK_CONTACT_REQUEST = 0  // requestCode
+    }
   }
   ```
 
