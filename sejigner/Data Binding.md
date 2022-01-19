@@ -100,8 +100,6 @@ findViewById<TextView>(R.id.sample_text).apply {
 
 - ViewHolder에서는 캐싱이 이루어지지 않아 RecyclerView에서 문제 발생
 
-
-
 > ViewBinding, DataBinding, ViewModel, LiveData 모두 밀접한 관계가 있어서 따로 공부하는 것 보다는 직접 조합하여 써보는 것이 학습에 효과적
 > 
 > DataBinding, ViewBinding이 단독으로 쓰이는 것은 학습 단계 정도 일 것. ViewModel과 LiveData 활용이 기본
