@@ -137,9 +137,7 @@ ViewModel.allFirstPaperPlanes(UID).observe(viewLifecycleOwner, {
 
 </androidx.constraintlayout.widget.ConstraintLayout>raintlayout.widget.ConstraintLayout>
 ```
-
-![StaggeredGridLayout](./img/staggered) ![myAppExample](./img/Screenshot_20220129-122243_PAPLE.jpg){: width="100" height="100"}
-
+<img src="img/gfgstaggeredgridlayout.gif", width="400"> <img src="img/Screenshot_20220129-122243_PAPLE.jpg", width="500">
 ### 3. 어댑터 및 뷰 홀더 구현
 
 - Adapter와 ViewHolder가 데이터 표시 방식을 결정한다. 
