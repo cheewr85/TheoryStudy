@@ -138,7 +138,7 @@ ViewModel.allFirstPaperPlanes(UID).observe(viewLifecycleOwner, {
 </androidx.constraintlayout.widget.ConstraintLayout>raintlayout.widget.ConstraintLayout>
 ```
 
-<img src="file:///C:/Users/sejig/Downloads/B9ECED6F.ASUSPCAssistant_qmba6cd70vzyy!App/Link_to_MyASUS/Screenshot_20220129-122243_PAPLE.jpg" title="" alt="Screenshot_20220129-122243_PAPLE.jpg" width="170"><img src="file:///C:/Users/sejig/AppData/Roaming/marktext/images/2022-01-29-12-33-14-image.png" title="" alt="" width="501">
+![StaggeredGridLayout](./img/staggered) ![myAppExample](./img/myapp)
 
 ### 3. 어댑터 및 뷰 홀더 구현
 
