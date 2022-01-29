@@ -153,7 +153,14 @@ Picasso, Glide, Fresco, Coil 中 상황에 따라 선택
 - 어느정도의 코루틴 개념 학습 필요
 
 - ```kotlin
-  
+   imageView.load(url) {
+              listener(
+                      onError = { _,_ -> /** Show toast. */ },
+                      onSuccess = { _,_ -> toast("Complete") }
+                      }
+              )
+              transformations(RoundedCornersTransformation(128f))
+          }
   ```
 
 
