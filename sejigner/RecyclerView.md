@@ -138,7 +138,7 @@ ViewModel.allFirstPaperPlanes(UID).observe(viewLifecycleOwner, {
 </androidx.constraintlayout.widget.ConstraintLayout>raintlayout.widget.ConstraintLayout>
 ```
 
-![StaggeredGridLayout](./img/staggered) ![myAppExample](./img/Screenshot_20220129-122243_PAPLE.jpg)
+![StaggeredGridLayout](./img/staggered) ![myAppExample](./img/Screenshot_20220129-122243_PAPLE.jpg){: width="400" height="400"}
 
 ### 3. 어댑터 및 뷰 홀더 구현
 
