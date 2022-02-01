@@ -28,7 +28,7 @@
   
   - **인텐트 필터**  매니페스트 파일에 들어있는 표현으로 앱 내 컴포넌트가 받게 될 인텐트의 유형을 나타낸다. 인텐트 필터가 없는 다른 앱 컴포넌트는 명시적 인텐트를 통해서만 시작할 수 있다.
   
-  ![intent_example](img\intent_example.png)
+  ![intent_example](img/intent_example.png)
 
 ### 인텐트 빌드
 
