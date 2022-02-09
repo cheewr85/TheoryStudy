@@ -136,3 +136,128 @@ class MyActivity : AppCompatActivity() {
 - 이러한 ViewModel의 특성을 바탕으로 Fragment간 데이터 공유에 있어서 유용하게 쓸 수 있음
 
 - 앱 UI의 데이터와 데이터베이스 간의 동기화를 유지하는데도 있어서 ViewModel을 사용헤서 데이터 로드 작업을 분리할 수 있음
+
+## Data Binding
+- 선언적 형식으로 레이아웃의 UI 구성요소를 앱의 데이터 소스와 결합할 수 있는 지원 라이브러리
+
+- 즉, xml 파일에 Data를 연결해서 사용할 수 있게 해주는 것, 아래와 같이 레이아웃 파일에서 직접 View에 할당을 해주는 것
+```xml
+<TextView
+        android:text="@{viewmodel.userName}" />
+```
+
+- 이외에도 레이아웃의 뷰를 데이터 개체와 결합하는데 필요한 클래스를 자동으로 생성함, 기존 레이아웃과 공존하면서 data 요소 내의 저장하여서 layout 태그로 래핑할 수 있음
+
+- data, variable 태그를 추가하고 name에는 변수명을, type에는 데이터 바인딩을 통한 이벤트를 세팅할 것을 적어주면 됨
+
+### 예시
+- MainActivity에서 TextView만 Button을 추가한 ConstraintLayout이 아래와 같음
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/hello_text_view"
+        android:text="Hello!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+  
+    <Button
+        android:id="@+id/btn_change"
+        android:text="Text Change!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hello_text_view"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+```
+
+- 여기서 최상단 ConstraintLayout을 layout아래에 둠 이때 data, variable 추가함
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+  
+    <data>
+      <variable
+         name="main"
+         type="com.joel.jojo.MainActivity"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/hello_text_view"
+            android:text="Hello!"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+      
+        <Button
+            android:id="@+id/btn_change"
+            android:text="Text Change!"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hello_text_view"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+```
+
+- 그런 다음 세팅한 xml의 액티비티 클래스 파일로 이동하면 직접적으로 데이터 변화를 처리할 수 있음
+```kotlin
+class MainActivity : AppCompatActivity() {
+    // xml 파일명이 카멜케이스로 클래스가 자동생성 됩니다.
+    private lateinit var binding: ActivityMainBinding
+
+    var text = "Hello!"
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        // binding 세팅
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        // 현재 binding시킨 xml의 variable name
+        binding.main = this
+        // binding 버튼 클릭 이벤트
+        binding.btnChange.setOnClickListener {
+            text = "Hello Binding!"
+            // Data가 변동될 경우 binding된 View들에 Data 변화를 알려줌
+            binding.invalidateAll()
+        }
+    }
+}
+```
+
+- xml에 데이터 집합 클래스를 bind해서 해당 클래스가 변경되면 연결된 여러개의 View가 한 번에 변경할 수 있음
+
+- BindingAdapter를 통해서 쉽게 출력하고 정리할 수 있음, LiveData를 사용하여서 Data 반영시 View도 같이 변경을 할 수 있음
+
+- findViewById를 호출하지 않아도 자동으로 xml에 있는 View들을 만들어줌
+
+- RecyclerView에 각각의 item을 set 해주는 작업을 자동으로 해줄 수 있음
+
+- data가 바뀌면 자동으로 View를 변경할 수 있고, xml 리소스만 보고도 View에 어떤 데이터가 들어가는지 파악이 가능함
+
+- 코드 가독성이 좋아지고 코드량도 줄어들 수 있음(MVP, MVVM 패턴을 구현하기 위해서 유용하게 쓰임)
