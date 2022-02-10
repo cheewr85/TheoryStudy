@@ -258,7 +258,7 @@ button.setOnClickListener {
 ```
 
 - 이를 도식화 시킨다면 아래와 같은 구조로 위의 작업이 이루어지는 것임
-![one](/cheewr85/img/nine.png)
+![one](/cheewr85/img/android/nine.png)
 
 - 여기서 주어진 키에는 단일 리스너와 결과만 있을 수 있음, 리스너가 결과를 수신하고 onFragmentResult 콜백을 실행하면 결과는 삭제됨
 
