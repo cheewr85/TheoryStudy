@@ -70,13 +70,13 @@ class SomethingAsync extends AsyncTask<Void , Integer , Integer> {
 
 - 전체적인 흐름이 아래와 같이 진행된다고 볼 수 있음
 
-![one](/cheewr85/img/fourteen.png)
+![one](/cheewr85/img/android/fourteen.png)
 
 - 이를 보면 시간순으로 데이터가 발행되는 것을 -> 로 표현을 한 것이고 그 안에 있는 도형들은 각각 Observable에서 발행하는 데이터이고 onNext 알림이 발생해서 데이터를 발행함
 
 - 그리고 `|` 모양은 데이터 발행이 완료했다는 것을 의미함, 점선은 각 함수의 입력과 출력데이터이고 가운데 박스는 함수를 의미함, 이런 과정이 아래와 같이 더 복잡하게 발생할 수 있음
 
-![one](/cheewr85/img/fifteen.png)
+![one](/cheewr85/img/android/fifteen.png)
 
 - 이를 코드적으로 파악을 더 해본다면 아래와 같이 볼 수 있음
 ```java
@@ -222,6 +222,6 @@ class LoginViewModel(
 
 - 값을 비동기적으로 생성하고 사용할 수 있음, 데이터 스트림은 아래와 같이 세 가지 항목이 있음
 
-![one](/cheewr85/img/sixteen.png)
+![one](/cheewr85/img/android/sixteen.png)
 
 - 이러한 방법은, 앞서 본 Coroutine과 다르게 쓰는데, 데이터베이스에서 실시간 업데이트를 수신하는 등의 방식으로써 사용함

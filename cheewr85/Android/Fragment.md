@@ -20,7 +20,7 @@
 
 - 예시로 아래와 같은 구조로써 FragmentManager로 연결하고 관리할 수 있음
 
-![one](/cheewr85/img/six.png)
+![one](/cheewr85/img/android/six.png)
 
 - 이렇게 FragmentManager를 사용한다면 변경사항이나 Fragment를 사용하는 모든 상황이 FragmentTransaction이라는 단일 단위로 커밋이 되서 관리가 됨
 
@@ -33,7 +33,7 @@
 ### Fragment 수명 주기
 - Fragment도 자체적인 수명 주기를 가지고 있는데 아래와 같은 수명 주기를 가짐
 
-![one](/cheewr85/img/seven.png)
+![one](/cheewr85/img/android/seven.png)
 
 - Fragment는 크게 INITIALIZED, CREATED, STARTED, RESUMED, DESTROYED의 상태를 가지고 onCreate, onStart, onResume, onPause, onStop, onDestroy의 콜백을 가지고 있음
 
@@ -59,7 +59,7 @@
 
 - 그리고 더 이상 Fragment가 더 이상 보이지 않는 경우 CREATED 상태가 되면서 onStop이 콜백이 되면서 상태에 대한 전환이 일어남, 여기서 상태의 저장과 전환에 대해서 아래와 같이 API 버전에 따라 상이하게 나타남
 
-![one](/cheewr85/img/eight.png)
+![one](/cheewr85/img/android/eight.png)
 
 - 모든 작업이 완료되면 Fragment는 CREATED 상태 View는 DESTROYED 상태로 넘어가고 모든 Fragment View들은 제거가 됨, 그리고 완전히 제거 됐을 때 Fragment 역시 DESTROYED 상태로 넘어가게 됨
 

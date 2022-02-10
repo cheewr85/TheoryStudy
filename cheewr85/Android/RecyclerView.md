@@ -18,7 +18,7 @@
 
 - 즉 아래와 같은 흐름으로써 활용이 됨
 
-![one](/cheewr85/img/seventeen.png)
+![one](/cheewr85/img/android/seventeen.png)
 
 - 여기서 자세하게 RecyclerView를 활용하여서 쓰는 방법에 대해서는 별도로 실습을 통해서 하는걸 권장, 위의 흐름을 이해하고 진행하는게 중요
 

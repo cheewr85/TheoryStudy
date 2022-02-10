@@ -26,7 +26,7 @@
 ### GPU Overdraw 시각화
 - 개발자 옵션에서 UI의 색을 지정해서 Overdraw를 식별을 할 수 있음, 이를 통해서 아래와 같이 파악가능함
 
-![one](/cheewr85/img/eighteen.png)
+![one](/cheewr85/img/android/eighteen.png)
 
 - 색깔에 따라서 Overdraw 횟수를 파악할 수 있음, 이를 바탕으로 최적화 할 수 있음
 
