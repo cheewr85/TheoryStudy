@@ -5,6 +5,8 @@
 
 - 그러면 hello 프로그램은 실행이되서 hello, world를 출력하고 사라짐, 그리고 shell은 사라질때까지 기다리고 다음 명령어 입력을 기다리는 식으로 진행이 됨
 
+---------------
+
 ### 시스템 하드웨어 구성
 ![one](/cheewr85/img/computerarchitecture/one.png)
 
@@ -70,6 +72,8 @@
 - 이 명령어는 memory에서 register file로 `hello world\n`가 복사가 되고 거기서 아래와 같이 출력이 보이게 됨
 ![one](/cheewr85/img/computerarchitecture/five.png)
 
+-------------------
+
 ### 캐시
 - 위에서 예제에서 알 수 있는 부분은 시스템은 많은 시간을 정보를 하나의 곳에서 다른 곳으로 옮기는데 쓴다는 것임
 
@@ -105,6 +109,8 @@
 
 - 이를 통해서 프로그램의 성능을 더 끌어올릴 수 있음
 
+-----------------
+
 ### 메모리 계층구조
 ![one](/cheewr85/img/computerarchitecture/seven.png)
 
@@ -113,6 +119,8 @@
 - bottom으로 갈수록 느려지고 커치고 per byte 비용이 줄어들고 top으로 가면 그 반대로 됨
 
 - 기본 개념은 상위 계층이 밑의 하위 계층의 캐시 역할을 한다는 것임, 여기서 만약 네트워크 환경의 분산 시스템일 경우 local disk가 다른 시스템 disk의 캐시 역할을 할 수 있음, 이를 통해서 성능에 대한 사항을 생각해 볼 수 있음
+
+-------------------
 
 ### The Operating System Manages the Hardware
 - 계속 다루고 있는 예제로 hello program이 load되고 실행되는 과정에서 OS가 제공하는 서비스에 의존을 함
@@ -224,6 +232,8 @@
 - 이 개념은 applications에 시스템이 가지고 있는 다양한 모든 I/O devices의 표준화된 규격을 제공할 수 있음
 
 - 이를 통해서 application programmer는 세부적인 사항을 알지 못하더라도 조작을 할 수 있게 되는 것임
+
+------------
 
 ### 네트워크를 사용한 다른 System과의 Communicate
 - 현대 시스템에서는 네트워크를 통해서 다른 시스템들과 연결되어 있음
