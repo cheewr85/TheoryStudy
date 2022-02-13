@@ -163,7 +163,7 @@
 - 어떠한 상태이든 uniprocessor system에서는 단일 process를 위해서 code를 실행함, operating system이 현재 process에서 새로운 process로 바꾸려고 결정했을 때, 현재 process의 context를 저장하고 새로운 process의 context를 가지고오는 context switch를 실행함, 그리고 새로운 process에 control을 넘겨줌, 아래와 같은 흐름을 가짐
 ![one](/cheewr85/img/computerarchitecture/ten.png)
 
-- 이 과정을 풀어서 설명하면 shell process와 hello process가 존재함, 여기서 처음엔 shell process가 혼자서 실행이 되고 명령어 입력을 기다림, hello program 실행을 요청하면 shell은 우리의 요청을 수행받아 system call이라는 특별한 함수를 불러일으켜 operating system의 control을 너ㅓㅁ김
+- 이 과정을 풀어서 설명하면 shell process와 hello process가 존재함, 여기서 처음엔 shell process가 혼자서 실행이 되고 명령어 입력을 기다림, hello program 실행을 요청하면 shell은 우리의 요청을 수행받아 system call이라는 특별한 함수를 불러일으켜 operating system의 control을 넘김
 
 - operating system은 shell context를 저장하고 hello process와 context를 생성함, 그리고 control을 hello process에 넘김, 그리고 hello가 끝났을 때 shell process의 context를 다시 불러와 control을 넘기고 다음 명령어를 기다림
 
