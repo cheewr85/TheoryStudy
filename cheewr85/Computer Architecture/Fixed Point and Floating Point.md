@@ -16,6 +16,7 @@
 ![one](/cheewr85/img/computerarchitecture/eighteen.png)
 
 - 그리고 모두 0으로 채울 수 있음
+
 ![one](/cheewr85/img/computerarchitecture/nineteen.png)
 
 ## 부동 소수점
@@ -32,9 +33,11 @@
 - 가수부의 경우 m의 소수점 아래 부분을 말하므로 010101이 됨
 
 - 이렇게 부동 소수점을 구하여 넣어줄 수 있음
+
 ![one](/cheewr85/img/computerarchitecture/twenty.png)
 
 - 그리고 0으로 모두 채워서 넣을 수 있음
+
 ![one](/cheewr85/img/computerarchitecture/twentyone.png)
 
 - 이렇게 보면 부동소수점이 상당히 번거로운 방식인데 사용하는 이유는 고정 소수점으로 하면 일정 자릿수보다 큰 수를 다룰 수 없게 됨
