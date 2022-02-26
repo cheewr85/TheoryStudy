@@ -30,6 +30,7 @@
 |--|--|--|--|--|--|--|--|--|--|
 |홀수 패리티|1|1|0|0|1|1|1|**0**|1이 홀수개이므로 오류 검출 x|
 |짝수 패리티|1|1|0|0|1|1|1|**1**|1이 짝수개이므로 오류 검출 x|
+
 오류의 개수가 짝수이면 오류를 검출하지 못하는 문제 -> 병렬 패리티와 해밍코드 도입
 
 ## 병렬 패리티 블록합 검사(Block Sum Check)
@@ -58,8 +59,13 @@
 
 
 ## Reference
+
 https://devuna.tistory.com/31
+
 https://milkye.tistory.com/130
+
 https://youtu.be/NtwMSk2vVIA
+
 https://youtu.be/FJ85Zd3QIKY
+
 > Written with [StackEdit](https://stackedit.io/).
