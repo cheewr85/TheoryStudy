@@ -1,6 +1,7 @@
 ﻿
 # Process Address Space
 ![process address space](/sejigner/img/os/address/1.png)
+
 메모리는 구역을 나눠 데이터를 최대한 공유하도록 하여 메모리 사용량을 줄임
 ## Code 영역
 - 프로그램의 코드가 저장되는 공간 Text 영역이라고도 불림
