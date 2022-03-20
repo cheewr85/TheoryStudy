@@ -68,7 +68,7 @@ fun onClick(v: View) {
 
 ### 정리
 - 위의 Process와 Thread를 도식화 시키면 아래와 같음
-![one](/cheewr85/img/twelve.png)
+![one](/cheewr85/img/android/twelve.png)
 
 - 여기서 가장 중요한 것은 UI Thread에서는 긴 시간이 걸리는 작업을 지양해야하는 것 그리고 Worker Thread에서는 UI 작업을 하지 않는 것임
 
@@ -87,7 +87,7 @@ fun onClick(v: View) {
 - 하나의 데이터를 보내기 위해 한 개의 Message 인스턴스가 필요하고 일단 데이터를 담은 Message 객체를 Handler로 보내면 해당 객체는 Handler와 연결된 Message Queue에 쌓이게 됨
 
 #### 도식화
-![one](/cheewr85/img/thirteen.png)
+![one](/cheewr85/img/android/thirteen.png)
 
 ## Handler
 - 위에 도식화와 Message Queue에서 설명했지만 Handler는 Message Queue에서 던져주는 Message 혹은 Runnable을 처리하는 역할을 함

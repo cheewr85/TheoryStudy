@@ -20,7 +20,7 @@
 
 - 애플리케이션 객체를 생성하고 Context가 필요할 떄 Application Context를 전달해야함, 이때 Activity Context를 전달하면 Activity가 화면에 표시되지 않는 순간에도 Garbage Collection이 진행되지 않아 메모리 누수가 발생함
 
-![one](/cheewr85/img/eleven.png)
+![one](/cheewr85/img/android/eleven.png)
 
 - 좀 더 확실한 예를 설명하면 앱에서 데이터베이스를 관장하는 AppDatabase라는 클래스가 싱글톤으로 존재한다고 할 때, 이를 초기화시 Context가 필요한데 이때 Application Context가 필요함
 

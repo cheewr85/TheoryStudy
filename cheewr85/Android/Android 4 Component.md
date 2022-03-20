@@ -1,5 +1,5 @@
 ## 안드로이드 4대 컴포넌트
-![one](/cheewr85/img/one.png)
+![one](/cheewr85/img/android/one.png)
 
 - 위와 같이 Android 앱의 필수적인 기본 구성 요소가 존재하고 해당 구성 요소는 시스템이나 사용자가 앱에 들어올 수 있는 진입점이자 다른 구성 요소에 종속되는 구성 요소도 있음
 - 각 유형은 뚜렷한 목적을 수행하고 각자 나름의 수명 주기가 있어 구서 요소의 생성 및 소멸 방식을 정의함
@@ -12,7 +12,7 @@
 - 이전에 사용한 프로세스에 사용자가 다시 찾을 만한 Activity가 있다는 것을 알고 해당 프로세스를 유지하는 데 더 높은 우선순위를 부여함
 - 앱이 프로세스를 종료하도록 도와서 이전 상태가 복원되는 동시에 사용자가 Activity로 돌아갈 수 있게함
 - 앱이 서로 사용자 플로우를 구현하고 시스템이 이러한 플로우를 조정하기 위한 수단을 제공함
-![one](/cheewr85/img/two.png)
+![one](/cheewr85/img/android/two.png)
 
 - 위와 같은 생명주기를 역시 가지고 있음
 
@@ -237,7 +237,7 @@ private fun initOnOffButton() {
 - 사용자 인터페이스를 제공하지 않음, 백그라운드 음악 재생, 네트워크를 통한 데이터를 가져오는 등
 - 다른 구성 요소가 서비스를 시작한 다음 실행하도록 두거나 자신에게 바인딩하여 상호작용하게 할 수 있음
 - 작업이 완료될 때까지 해당 Service를 계속 실행하라고 시스템에 지시함, 일부 데이터를 동기화하거나 사용자가 앱에서 나간 후에도 음악을 재생하는 등 처리할 수 있음
-![one](/cheewr85/img/three.png)
+![one](/cheewr85/img/android/three.png)
 
 - Service 또한 이러한 생명주기를 가지고 있음, Service는 기본적으로 UI가 동작하는 메인 쓰레드에서 동작하기 떄문에 Service 내에서 별도의 Thread를 생성해서 작업을 수행해야함
 
@@ -378,7 +378,7 @@ private val viewPagerAdapter = HouseViewPagerAdapter(itemClicked = {
 
 - 그리고 위에서 Broadcast Receiver의 경우 Intent를 통해서 Broadcast를 받은 것을 볼 수 있음
 - Content Provider에서도 ContentResolver로 아래와 같이 흐름으로 직접 URI 데이터에 접근해서 처리할 수 있음, 위에서는 그냥 URI를 Storage에서 받아와서 리스트에 담아서 보여주는 것이었기 때문에 이런 과정이 없이 Intent로 직접 권한을 요청하고 받아서 가져온 것임
-![one](/cheewr85/img/four.png)
+![one](/cheewr85/img/android/four.png)
 
 - Service의 경우 Activity와 유사하게 Intent로 처리해서 넘겨받을 수 있음
 

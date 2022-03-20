@@ -10,7 +10,7 @@
 
 ### 시스템의 하드웨어 조직
 
-[!Hardware Organization](img/systems 1.4/1.png)
+![Hardware Organization](/sejigner/img/systems_1.4/1.png)
 
 - bus
   전기도관 사이를 왔다갔다하며 정해진 크기의 워드(word)를 옮긴다.
@@ -53,11 +53,11 @@
 
 - 그 격차를 해소하기 위해, 캐시 메모리가 도입되었다. 프로세서가 미래에 필요로 할 것으로 예상되는 정보를 임시로 저장하고 있는 공간으로 사용된다.
 
-[!Memory Hierarchy](img/systems 1.4/2.png)
+![Memory Hierarchy](/sejigner/img/systems_1.4/2.png)
 
-- 프로세서 칩에 있는 L1 캐시는 수만 바이트를 지니고 잇고, 레지스터 파일만큼 빠르게 접근 가능하다.
+- 프로세서 칩에 있는 L1 캐시는 수만 바이트를 지니고 고, 레지스터 파일만큼 빠르게 접근 가능하다.
 
-- 그보다 더 큰 L2 캐시는 수십~수백만 바이트를 지니며 특별한 버스가 프로세서와 연결해준다. L1 캐시보다 5배 정도 속도가 느리지만 메인 메모리보다 5~10배 정도 빠르다.
+- 그보다 더 큰 L2 캐시는 수십,수백만 바이트를 지니며 특별한 버스가 프로세서와 연결해준다. L1 캐시보다 5배 정도 속도가 느리지만 메인 메모리보다 5, 10배 정도 빠르다.
 
 - Static Random Access Memory (SRAM)이라는 하드웨어 기술로 구현되었다.
 
@@ -78,7 +78,7 @@
 
 ## 1.7 운영체제가 하드웨어를 관리한다.
 
-[!Layered view of a computer system](img/systems 1.4/3.png)
+![Layered view of a computer system](/sejigner/img/systems_1.4/3.png)
 
 - 프로그램이 실행되고, 키보드, 디스플레이, 디스크, 메인 메모리 등이 사용될 때, 프로그램이 직접 접촉하지 않고, 운영체제가 제공하는 서비스를 통해서 접근한다.
 
