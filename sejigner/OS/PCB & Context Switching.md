@@ -12,7 +12,7 @@ PCB와 Context Switching은 여러 개의 프로세스가 돌아갈 때 CPU 스�
 ## PCB(Process Control Block)
 프로세스의 메타데이터가 저장되는 곳으로 하나의 PCB에 하나의 프로세스 메타데이터가 담김
 프로세스가 생성되면 Metadata가 PCB에 저장된다.
-![1](/img/os/pcb & context switching/1.jpg)
+![1](sejigner/img/os/pcb & context switching/1.jpg)
 - Process State : 프로세스의 상태 (생성, 준비, 실행, 중단, 종료)
 - Process Counter : 다음으로 실행할 명령어의 주소
 
