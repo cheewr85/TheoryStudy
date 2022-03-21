@@ -24,16 +24,22 @@
 
 ### Bus와 Register의 넓이
 - 데이터 : 마이크로컨트롤러는 4 비트, 8 비트, 16 비트, 32 비트, 64 비트 넓이의 데이터 버스를 갖는다. 
+
 ![Bog Standard Architecture](/sejigner/img/systems_1.4/cpu/2.jpg)
+
 데이터 버스는 2 바이트 또는 16 비트 넓이이다. 
 - 주소 : 주소 버스는 데이터 버스의 넓이와 같을 필요 없다. n개의 주소 라인을 갖는다는 것은 2^n개의 주소 또는 그 주소 공간의 location이 존재한다는 것을 의미한다. n = 10일 경우, 1K locations, n=20 -> 1M, n=30 -> 1G이다. 그러나 마이크로컨트롤러는 멀티 태스킹 용도로 디자인된 것이 아니어서 그렇게 많을 필요가 없다.
 - Instruction Register의 opcode(연산코드) 파트는 opcode의 가능한 최댓값만큼 커야한다. 8 bits width라고 가정하면, 256개의 다른 명령어가 가능해지는데, IR은 이만큼의 크기를 갖추고 있어야 한다. IR의 address 파트는 address 버스의 크기와 같아야 한다. 
+
 ![Bog Standard Architecture](/sejigner/img/systems_1.4/cpu/3.jpg)
+
 여기서 opcode IR 8 bits + address IR 24 bits -> 전체 IR은 32 bit의 width를 갖는다.
 
 ### 메인 메모리
 메모리는 거의 RAM이 대부분을 차지하고, 약간의 추가 읽기전용 메모리 ROM으로 구성된다, 메인 메모리는 CPU 칩 이에 있지는 않지만, 마더보드 위에서 버스(데이터 버스+주소 버스)를 통해 CPU로 연결된다.
+
 ![Bog Standard Architecture](/sejigner/img/systems_1.4/cpu/4.jpg)
+
 주소 버스가 24 비트 width니까, 주소 공간은 0x0 부터 2^24 -1 까지 할당된다. 데이터 버스는 16 비트 width로, 내용물의 너비가 16 비트이다. 따라서 데이터 버스가 취할 수 있는 가장 큰 값은 2의 16승 -1 또는 oxFFFF이다.
 
 ## Fetch, Decode, Execute 사이클

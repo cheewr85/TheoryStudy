@@ -126,7 +126,7 @@ class MyActivity : AppCompatActivity() {
 
 - Activity에서 Activity까 끝날 떄까지 Fragment에서 Fragment가 분리될 때까지 메모리에 남아있음
 
-![one](/cheewr85/img/ten.png)
+![one](/cheewr85/img/android/ten.png)
 
 - 즉, ViewModel이 처음 요청되었을 때부터 Activity가 끝나고 폐기될 때까지 ViewModel은 존재함
 
