@@ -6,7 +6,8 @@
 
 ## IPC 종류
 상황에 따라 효율적인 장비가 있음.
-![ipc](/sejigner/img/os/ipc/2.png)
+
+![ipc](/sejigner/img/os/ipc/2.PNG)
 
 ### 익명 PIPE
 ![ipc](/sejigner/img/os/ipc/3.PNG)
