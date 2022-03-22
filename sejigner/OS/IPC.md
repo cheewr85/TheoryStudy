@@ -1,6 +1,6 @@
 ﻿# IPC (Inter-Process Communication)
 ## IPC의 정의
-![ipc](/sejigner/img/os/ipc/1.png)
+![ipc](/sejigner/img/os/ipc/1.PNG)
 - 프로세스 사이에서 데이터를 주고 받는 행위
 - 프로세스는 서로 독립된 상태로, 통신을 위해서는 **커널**의 IPC를 거쳐야 함 
 
@@ -9,7 +9,7 @@
 ![ipc](/sejigner/img/os/ipc/2.png)
 
 ### 익명 PIPE
-![ipc](/sejigner/img/os/ipc/3.png)
+![ipc](/sejigner/img/os/ipc/3.PNG)
 - 하나의 프로세스는 write, 다른 하나의 프로세스는 read
 - 부모 자식 간 단방향 통신으로 자주 사용
 - Half-duplex(반이중) 통신이라고도 불림
@@ -22,7 +22,7 @@
 	- 부모 자식 간 프로세스 사이에서 가능
 
 ### Named PIPE(FIFO)
-![ipc](/sejigner/img/os/ipc/4.png)
+![ipc](/sejigner/img/os/ipc/4.PNG)
 - 이름을 가진 PIPE를 통해 프로세스 간 단방향 통신 지원
 - 서로 다른 프로세스들이 통신
 - 장점 
