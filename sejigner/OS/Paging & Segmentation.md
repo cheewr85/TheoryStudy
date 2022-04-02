@@ -1,5 +1,6 @@
 ﻿# Segmentation & Paging
 > 페이징과 세그먼테이션은 현대 운영체제에서 혼용되는 가상 메모리 관리 기법이다.
+
 ![virtual memory](/sejigner/img/os/paging&segmentation/1.png)
 ## 가상 메모리 
 프로세스가 실제 메모리 크기와 상관없이 메모리를 사용할 수 있도록 가상 메모리 주소를 사용하는 것
@@ -22,7 +23,7 @@
 - 페이지와 같은 크기로 물리 메모리를 나눈 블록 단위 : 프레임
 - 페이지가 하나의 프레임을 할당받으면, 페이지 테이블을 통해서 page를 frame으로 매핑
 	- 페이지 테이블(page table) 
-		- ![virtual memory](/sejigner/img/os/paging&segmentation/2.png)
+		![virtual memory](/sejigner/img/os/paging&segmentation/2.png)
 		- page에 매핑되는 frame을 찾을 때 참조하는 표
 		- 페이지 번호를 의미하는 key(or index)와 page와 매핑된 frame 번호와 기타 플래그 정보를 의미하는 value를 포함
 - 프레임을 할당받지 못한 페이지는 외부 저장장치에 같은 크기로 저장되어 관리됨
