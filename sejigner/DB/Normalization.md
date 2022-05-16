@@ -18,11 +18,11 @@
 - 그룹이 모든 속성에 반복 X
 - 기본키를 통해 각 집합을 고유하게 식별하도록 함
 
-![1nf-1](sejigner/img/db/normalization/1.png)
+![1nf-1](/sejigner/img/db/normalization/1.png)
 
 1NF의 조건(하나의 원자값)을 만족하기 위해서는 아래와 같이 변경되어야 함
 
-![1nf-2](sejigner/img/db/normalization/2.png)
+![1nf-2](/sejigner/img/db/normalization/2.png)
 
 Customer ID가 고유값으로서 각 집합의 식별을 담당
 
@@ -31,7 +31,7 @@ Customer ID가 고유값으로서 각 집합의 식별을 담당
 
 즉, 테이블의 기본키가 복합키(키1, 키2)로 묶여있을 때, 두 키 중 하나의 키만으로 다른 컬럼을 결정지을 수 있어서는 안된다. 
 
-![2nf-1](sejigner/img/db/normalization/3.png)
+![2nf-1](/sejigner/img/db/normalization/3.png)
 
 Manufacturer와 Model이 키가 되고, 이를 통해 Model Full Name을 알 수 있다.
 
@@ -39,7 +39,7 @@ Manufacturer Country는 Manufacturer에 종속적이지만(부분 함수 종속)
 
 따라서, 다음과 같이 테이블을 분리해야한다.
 
-![2nf-2](sejigner/img/db/normalization/4.png)
+![2nf-2](/sejigner/img/db/normalization/4.png)
 
 이제 각 테이블이 완전 함수적 종속 상태가 되었다.
 
@@ -52,7 +52,7 @@ Manufacturer Country는 Manufacturer에 종속적이지만(부분 함수 종속)
 - 릴레이션이 2NF 만족
 - 기본키가 아닌 속성은 기본키에 의존해야 함
 
-![3nf-1](sejigner/img/db/normalization/5.png)
+![3nf-1](/sejigner/img/db/normalization/5.png)
 
 위 테이블의 기본키는 Tournament와 Year
 
@@ -62,6 +62,6 @@ Winner는 두 기본키로 구성된 복합키에 종속된다.
 
 이는 3NF를 위반하므로, 다음과 같이 분리해야 한다.
 
-![3nf-2](sejigner/img/db/normalization/6.png)
+![3nf-2](/sejigner/img/db/normalization/6.png)
 
 Winner Dates of Birth 라는 독립된 테이블을 두어, Winner가 기본키가 되고, Date of Birth가 기본키에 의존하도록 하여 3NF 조건을 만족한다.
