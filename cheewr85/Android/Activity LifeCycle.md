@@ -1,5 +1,5 @@
 ## 액티비티 생명주기
-![one](/cheewr85/img/two.png)
+![one](/cheewr85/img/android/two.png)
 
 - 사용자가 앱을 탐색하고, 앱에서 나가고, 앱으로 다시 돌아가면 앱의 Activity 인스턴스는 수명 주기 안에서 서로 다른 상태를 통해 전환됨
 - Activity 클래스는 활동이 상태 변화(시스템이 활동을 생성, 중단 또는 다시 시작하거나, 활동이 있는 프로세스를 종료하는 등)를 알아차릴 수 있는 여러 콜백을 제공함
@@ -31,7 +31,7 @@
 - onDestroy의 경우 활동이 소멸되기 전에 호출됨, 활동이 종료되는 경우(사용자가 활동을 아예 닫거나 finish()가 호출될 때), 구성 변경(기기 회전, 멀티 윈도우 모드)으로 인해 시스템이 일시적으로 활동을 소멸시키는 경우
 
 - 아래의 표와 같이 프로세스 수명 주기와 Activity 상태 간의 관계가 있음
-![one](/cheewr85/img/five.PNG)
+![one](/cheewr85/img/android/five.PNG)
 
 - 추가적으로 Activity의 회전 또는 멀티 윈도우 모드로 전환 시, 시스템은 이런 구성 변경이 발생하면 Activity를 소멸시켜 Activity 인스턴스에 저장된 모든 UI 상태를 제거함
 - 그래서 이런 부분에 대해서 ViewModel 또는 onSaveInstanceState 또는 로컬 저장소를 결합하여 사용자의 임시 UI 상태를 보존해야함
